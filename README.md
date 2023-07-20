@@ -21,33 +21,25 @@ La librería proporciona las siguientes funcionalidades principales:
 - **Visualización de datos geográficos**: Ofrece la posibilidad de dibujar mapas de cualquier comunidad autónoma, provincia y municipio. También puede dibujar un mapa completo de España mostrando varias comunidades autónomas, provincias y municipios en colores distintos.
 
 
-
-## Aplicaciones
-
-
-
-Esta librería puede ser de utilidad en múltiples contextos:
-
-
-
-- **Análisis geoespacial**: Para el análisis geoespacial en contextos como la planificación urbanística, la gestión de recursos naturales o la investigación en geografía y ciencias ambientales.
-
-- **Visualización de datos**: Para visualizar datos geoespaciales en proyectos de ciencia de datos y machine learning. Por ejemplo, se puede utilizar para visualizar el resultado de un modelo de predicción de precios inmobiliarios a nivel de municipio.
-
-- **Educación**: Como recurso educativo para enseñar geografía, ciencias de la tierra, o programación con Python. Los docentes pueden usarlo para ilustrar las diferencias geográficas entre distintas regiones de España.
-
-
-
 ## Instalación
 
 
 
 Antes de usar esta librería, necesitas instalar las dependencias necesarias. Puedes hacerlo con pip:
 
-
-
       
       pip install geopandas pandas matplotlib
+
+
+
+
+
+
+Después, puedes instalar la librería de forma manual, descargando el código del repositorio, situándote en la carpeta y ejecutando 
+
+      pip install -e .
+
+Nota: debes asegurarte que la carpeta del repositorio que te has descargado, sea accesible desde el python path.
 
 
 
@@ -90,8 +82,8 @@ Para obtener un listado de todas las comunidades autónomas, provincias o munici
 Finalmente, puedes utilizar la clase `GeoVisual` para dibujar mapas. Por ejemplo, para dibujar un mapa de Cataluña, puedes hacer lo siguiente:
 
     
-    geovisual = GeoVisual(geodata)
-    geovisual.dibujar_comunidad_autonoma("Cataluña")
+      geovisual = GeoVisual(geodata)
+      geovisual.dibujar_comunidad_autonoma("Cataluña")
 
 
 
@@ -100,4 +92,22 @@ Para dibujar un mapa completo de España mostrando varias entidades, puedes util
 
 
     
-    geovisual.dibujar_mapa(comunidades_autonomas=["Cataluña"], provincias=["Madrid"], municipios=["Valencia"])
+      geovisual.dibujar_mapa(comunidades_autonomas=["Cataluña"], provincias=["Madrid"], municipios=["Valencia"])
+
+
+
+
+## Aplicaciones
+
+
+
+Esta librería puede ser de utilidad en múltiples contextos:
+
+
+
+- **Análisis geoespacial**: Para el análisis geoespacial en contextos como la planificación urbanística, la gestión de recursos naturales o la investigación en geografía y ciencias ambientales.
+
+- **Visualización de datos**: Para visualizar datos geoespaciales en proyectos de ciencia de datos y machine learning. Por ejemplo, se puede utilizar para visualizar el resultado de un modelo de predicción de precios inmobiliarios a nivel de municipio.
+
+- **Educación**: Como recurso educativo para enseñar geografía, ciencias de la tierra, o programación con Python. Los docentes pueden usarlo para ilustrar las diferencias geográficas entre distintas regiones de España.
+
