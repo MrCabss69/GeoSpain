@@ -44,9 +44,7 @@ Nota: debes asegurarte que la carpeta del repositorio que te has descargado, sea
 
 ## Uso
 
-
-
-Primero, puedes importar las clases de la librería en tu script de Python:
+Importa las clase en tu script:
 
 
 
@@ -54,15 +52,13 @@ Primero, puedes importar las clases de la librería en tu script de Python:
 
 
 
-Luego, puedes crear una instancia de la clase `GeoData` para acceder a los datos geográficos:
+Crea una instancia de la clase `GeoData` para acceder a los datos geográficos:
 
       geodata = GeoData()
 
 
 
 Para obtener un listado de todas las comunidades autónomas, provincias o municipios, puedes usar los métodos correspondientes:
-
-
       
       comunidades = geodata.obtener_comunidades_autonomas()
       provincias = geodata.obtener_provincias("Cataluña")
@@ -70,7 +66,7 @@ Para obtener un listado de todas las comunidades autónomas, provincias o munici
 
 
 
-Finalmente, puedes utilizar la clase `GeoVisual` para dibujar mapas. Por ejemplo, para dibujar un mapa de Cataluña, puedes hacer lo siguiente:
+También puedes utilizar la clase `GeoVisual` para dibujar mapas. Por ejemplo, para dibujar un mapa de Cataluña, puedes hacer lo siguiente:
 
     
       geovisual = GeoVisual(geodata)
