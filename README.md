@@ -46,11 +46,8 @@ Antes de usar esta librería, necesitas instalar las dependencias necesarias. Pu
 
 
 
-\```
-
-pip install geopandas pandas matplotlib
-
-\```
+      
+      pip install geopandas pandas matplotlib
 
 
 
@@ -62,65 +59,39 @@ Primero, puedes importar la librería en tu script de Python:
 
 
 
-\```python
-
-import os
-
-import geopandas as gpd
-
-import matplotlib.pyplot as plt
-
-import pandas as pd
-
-\```
+      import os
+      import geopandas as gpd
+      import matplotlib.pyplot as plt
+      import pandas as pd
 
 
 
 Luego, puedes crear una instancia de la clase `GeoData` para acceder a los datos geográficos:
 
 
-
-\```python
-
-limites_espana = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_0.shp')
-
-limites_municipios = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_4.shp')
-
-
-
-geodata = GeoData()
-
-\```
+      
+      
+      limites_espana = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_0.shp')
+      limites_municipios = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_4.shp')
+      geodata = GeoData()
 
 
 
 Para obtener un listado de todas las comunidades autónomas, provincias o municipios, puedes usar los métodos correspondientes:
 
 
-
-\```python
-
-comunidades = geodata.obtener_comunidades_autonomas()
-
-provincias = geodata.obtener_provincias("Cataluña")
-
-municipios = geodata.obtener_municipios("Barcelona")
-
-\```
+      
+      comunidades = geodata.obtener_comunidades_autonomas()
+      provincias = geodata.obtener_provincias("Cataluña")
+      municipios = geodata.obtener_municipios("Barcelona")
 
 
 
 Finalmente, puedes utilizar la clase `GeoVisual` para dibujar mapas. Por ejemplo, para dibujar un mapa de Cataluña, puedes hacer lo siguiente:
 
-
-
-\```python
-
-geovisual = GeoVisual(geodata)
-
-geovisual.dibujar_comunidad_autonoma("Cataluña")
-
-\```
+    
+    geovisual = GeoVisual(geodata)
+    geovisual.dibujar_comunidad_autonoma("Cataluña")
 
 
 
@@ -128,8 +99,5 @@ Para dibujar un mapa completo de España mostrando varias entidades, puedes util
 
 
 
-\```python
-
-geovisual.dibujar_mapa(comunidades_autonomas=["Cataluña"], provincias=["Madrid"], municipios=["Valencia"])
-
-\```
+    
+    geovisual.dibujar_mapa(comunidades_autonomas=["Cataluña"], provincias=["Madrid"], municipios=["Valencia"])
