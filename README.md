@@ -1,5 +1,4 @@
-# Librería GeoPandas España
-
+# Geospain
 
 
 Esta librería proporciona una forma sencilla de acceder y visualizar los datos geográficos de España a nivel de comunidades autónomas, provincias y municipios utilizando la librería GeoPandas.
