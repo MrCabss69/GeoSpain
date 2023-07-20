@@ -47,24 +47,16 @@ Nota: debes asegurarte que la carpeta del repositorio que te has descargado, sea
 
 
 
-Primero, puedes importar la librería en tu script de Python:
+Primero, puedes importar las clases de la librería en tu script de Python:
 
 
 
-      import os
-      import geopandas as gpd
-      import matplotlib.pyplot as plt
-      import pandas as pd
+      from geospain.geo import GeoData, GeoVisual
 
 
 
 Luego, puedes crear una instancia de la clase `GeoData` para acceder a los datos geográficos:
 
-
-      
-      
-      limites_espana = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_0.shp')
-      limites_municipios = os.path.join(os.path.dirname(__file__), 'recursos', 'gadm41_ESP_4.shp')
       geodata = GeoData()
 
 
